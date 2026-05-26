@@ -1,56 +1,78 @@
 # Neural-Networks-Advanced-Backpropagation
 
-Deep learning project exploring neural networks, advanced backpropagation, optimization strategies, regularization methods, feature engineering, and neural model performance analysis.
+Advanced deep learning project exploring neural network optimization, backpropagation enhancement techniques, regularization strategies, and model performance analysis using the Wine Quality dataset.
 
 ---
 
 ## Visualizations
 
+### Dataset Analysis
+
+Dataset overview including descriptive statistics, feature inspection, and exploratory data preparation analysis.
+
+![Dataset Analysis](visuals/dataset_analysis.png)
+
 ### Wine Feature Distributions
 
-Exploratory data analysis showing wine quality distributions and feature behavior across the dataset used for neural network training.
+Feature distribution analysis across chemical attributes and wine quality measurements.
 
 ![Wine Feature Distributions](visuals/wine_feature_distributions.png)
 
 ### Optimization Comparison
 
-Comparison of advanced optimization techniques including optimizers, initialization methods, activation functions, batch normalization, and learning-rate scheduling using validation MAE performance.
+Comparison of advanced optimization strategies including optimizers, activation functions, initialization methods, batch normalization, and learning-rate scheduling.
 
 ![Optimization Comparison](visuals/optimization_comparison.png)
 
 ### Regularization Results
 
-Validation loss comparison across multiple regularization techniques including baseline networks, L1 regularization, L2 regularization, ElasticNet, dropout, and combined regularization methods.
+Validation loss comparison across multiple regularization methods including L1, L2, ElasticNet, Dropout, and combined regularization approaches.
 
 ![Regularization Results](visuals/regularization_results.png)
+
+### Gradient Flow Analysis
+
+Training and validation loss comparison across different neural network depths to analyze gradient behavior and model convergence.
+
+![Gradient Flow Analysis](visuals/gradient_flow_analysis.png)
 
 ---
 
 ## Dataset
 
-This project uses the **Wine Quality Dataset** for regression-based neural network experimentation and advanced backpropagation analysis.
+This project uses the **Wine Quality Dataset** for supervised regression and neural network experimentation.
 
 Dataset source:
 
-```text
-UCI Machine Learning Repository — Wine Quality Dataset
+```python
+winequality-red.csv
 ```
 
-The dataset is stored inside the repository data directory for reproducibility.
+Repository structure includes a placeholder data directory.
 
 ---
 
 ## Final Model Performance
 
-Best Performing Configuration: **Baseline Neural Network Configuration**
+Best Performing Configuration:
 
-Performance Metrics:
+- Optimizer: **SGD**
+- Activation Function: **ELU**
+- Validation Loss: **0.4294**
+- Validation MAE: **0.5070**
+- Dataset: **Wine Quality Dataset**
 
+Regularization Analysis:
+
+- Best Regularization Configuration: **Baseline**
 - Validation Loss: **0.5483**
 - Validation MAE: **0.5756**
-- Task Type: **Regression**
-- Dataset: **Wine Quality Dataset**
-- Features Used: **13 engineered input features**
+
+Network Depth Analysis:
+
+- Best Depth Configuration: **12 Layers**
+- Validation Loss: **0.4389**
+- Validation MAE: **0.5059**
 
 ---
 
@@ -63,12 +85,14 @@ Neural-Networks-Advanced-Backpropagation/
 │   └── Neural_Networks_Advanced_Backpropagation.ipynb
 │
 ├── visuals/
+│   ├── dataset_analysis.png
 │   ├── wine_feature_distributions.png
 │   ├── optimization_comparison.png
-│   └── regularization_results.png
+│   ├── regularization_results.png
+│   └── gradient_flow_analysis.png
 │
 ├── data/
-│   └── winequality.csv
+│   └── .gitkeep
 │
 ├── README.md
 └── requirements.txt
@@ -90,47 +114,32 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-Launch notebook environment:
+Run notebook:
 
 ```bash
 jupyter notebook
 ```
 
----
+Open:
 
-## Advanced Techniques Explored
-
-This project investigates advanced neural network training and stabilization techniques including:
-
-- Advanced backpropagation workflows
-- Gradient-based optimization
-- Optimizer comparison (SGD, Adam, RMSProp, Adagrad)
-- Weight initialization experimentation
-- Activation function analysis
-- Batch normalization
-- Learning rate scheduling
-- Regularization techniques
-- Feature engineering
-- Regression modeling
-- Bias-variance analysis
-- Validation performance benchmarking
+```text
+Neural_Networks_Advanced_Backpropagation.ipynb
+```
 
 ---
 
 ## Future Improvements
 
-Potential future enhancements include:
+Future enhancements may include:
 
-- Hyperparameter optimization using Optuna or Bayesian optimization.
-- Deeper neural architectures with residual connections.
-- Gradient clipping and gradient flow visualization.
-- Automated neural architecture search (NAS).
-- Expanded regularization experiments with advanced dropout strategies.
-- Cross-validation benchmarking across larger tabular datasets.
-- Explainable AI analysis for feature importance interpretation.
-- Deployment using Streamlit or Flask.
-- Comparison against ensemble machine learning models.
-- Expansion toward biomedical, financial, and operational datasets.
+- Hyperparameter optimization using Optuna or Bayesian Optimization.
+- Automated architecture search for hidden layer design.
+- Cross-validation for stronger generalization evaluation.
+- Expanded optimizer benchmarking using AdamW, Nadam, and Lion.
+- Feature importance analysis using SHAP or permutation methods.
+- Experiment tracking using MLflow or Weights & Biases.
+- Deployment as an interactive Streamlit model analysis dashboard.
+- GPU optimization for larger-scale neural network experimentation.
 
 ---
 
@@ -143,17 +152,14 @@ Areas of Interest:
 
 - Deep Learning
 - Neural Networks
-- Advanced Optimization
-- Backpropagation Analysis
+- Optimization Strategies
 - Predictive Analytics
-- Artificial Intelligence Applications
+- Natural Language Processing
 - Biotech AI Applications
 - AI-Driven Operational Intelligence
 
-Portfolio:
-
+Portfolio:  
 https://dare215.github.io/DariousBrown-Portfolio/
 
-LinkedIn:
-
+LinkedIn:  
 https://www.linkedin.com/in/dariousbrown
